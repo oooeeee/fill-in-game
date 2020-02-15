@@ -21,8 +21,11 @@
         'alert-warning': question_info.complexity == state.state.complexities[1],
         'alert-danger': question_info.complexity == state.state.complexities[2],
       }">
-      <font-awesome-icon :icon="['fas', 'lock']" v-if="this.locked"/>
+      <font-awesome-icon :icon="['fas', 'smile']"    v-if="question_info.complexity==state.state.complexities[0]"/>
+      <font-awesome-icon :icon="['fas', 'meh']"      v-if="question_info.complexity==state.state.complexities[1]"/>
+      <font-awesome-icon :icon="['fas', 'surprise']" v-if="question_info.complexity==state.state.complexities[2]"/>
       <font-awesome-icon :icon="['fas', 'check']" v-if="question_info.answer"/>
+      <font-awesome-icon :icon="['fas', 'lock']" v-else-if="this.locked"/>
     </div>
   </div>
 </template>
