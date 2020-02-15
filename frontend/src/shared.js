@@ -1,3 +1,4 @@
+import Bus from './bus'
 export const ComplexityHard = "Hard";
 export const ComplexityMedium = "Medium";
 export const ComplexityEasy = "Easy";
@@ -37,15 +38,11 @@ export const common_state_store = {
       },
     ],
   },
-  set_commands_count(commands_count) {
-    this.state.commands_count = commands_count
-    this.state.active_command = 1
-  },
-  remember_answer(question_index, answer_index){
+  _remember_answer(question_index, answer_index){
     this.state.questions[question_index].answer = {'command': this.state.active_command, 'answer_index': answer_index}
-    this.next_command()
+    this._next_command()
   },
-  next_command() {
+  _next_command() {
     var active_command = this.state.active_command + 1
     if (active_command > this.state.commands_count) {
       this.state.active_command = 1
@@ -54,3 +51,6 @@ export const common_state_store = {
     }
   },
 }
+
+Bus.$on('set_commands_count', (commands_count) => {common_state_store.state.commands_count = commands_count;common_state_store.state.active_command = 1})
+Bus.$on('remember_answer', (question_index, answer_index) => common_state_store._remember_answer(question_index, answer_index))

@@ -45,7 +45,8 @@ export default {
 
   created() {
     Bus.$on('lock_questions', (question_index) => {if (this.question_index != question_index) this.locked = true})
-    Bus.$on('unlock_questions', () => {this.locked = false})
+    Bus.$on('unlock_questions', () => {this.locked = false;this.question_visible = false})
+    Bus.$on('show_results', () => {this.show_results})
   },
 
   methods: {
@@ -55,8 +56,7 @@ export default {
       this.question_visible = true
     },
     set_answer(question_index, answer_index){
-      this.state.remember_answer(question_index, answer_index)
-      this.question_visible = false
+      Bus.$emit('remember_answer', question_index, answer_index)
       Bus.$emit('unlock_questions')
     }
   },

@@ -21,6 +21,5 @@ export default {
   data: () => ({
     state: common_state_store,
   }),
-
 }
 </script>

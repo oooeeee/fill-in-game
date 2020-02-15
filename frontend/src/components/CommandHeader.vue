@@ -37,7 +37,7 @@ export default {
 
   methods: {
     choose_commands_count(commands_count) {
-      this.state.set_commands_count(commands_count)
+      Bus.$emit('set_commands_count', commands_count)
     }
   },
 
