@@ -5,6 +5,8 @@ export const ComplexityEasy = "Easy";
 
 export const common_state_store = {
   state: {
+    commands_count: 0,
+    active_command: 0,
     complexities: [ComplexityEasy, ComplexityMedium, ComplexityHard],
     questions: [
       {
@@ -34,5 +36,9 @@ export const common_state_store = {
         ],
       },
     ],
+  },
+  set_commands_count(commands_count) {
+    this.state.commands_count = commands_count
+    this.state.active_command = 1
   },
 }
