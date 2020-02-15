@@ -2,9 +2,14 @@
   <div class="pd-2 card" style="width: 18rem; min-height: 18rem">
     <div v-if="question_visible">
       {{question_info.text}}
-      <div v-for="(answer, answer_index) in question_info.answers" v-bind:key="answer_index">
-        <span class="badge badge-primary">{{answer.text}}</span>
-      </div>
+      <b-button
+        variant="primary"
+        v-for="(answer, answer_index) in question_info.answers"
+        v-bind:key="answer_index"
+        @click.prevent="set_answer(question_index, answer_index)"
+      >
+        {{answer.text}}
+      </b-button>
     </div>
     <div v-else
       class="alert"
@@ -17,7 +22,7 @@
         'alert-danger': question_info.complexity == state.state.complexities[2],
       }">
       <font-awesome-icon :icon="['fas', 'lock']" v-if="this.locked"/>
-      <font-awesome-icon :icon="['fas', 'check']" v-if="question_info.answered"/>
+      <font-awesome-icon :icon="['fas', 'check']" v-if="question_info.answer"/>
     </div>
   </div>
 </template>
@@ -45,10 +50,15 @@ export default {
 
   methods: {
     show_question() {
-      if (this.locked) return
+      if (this.locked || this.question_info.answer ) return
       Bus.$emit("lock_questions", this.question_index)
       this.question_visible = true
     },
+    set_answer(question_index, answer_index){
+      this.state.remember_answer(question_index, answer_index)
+      this.question_visible = false
+      Bus.$emit('unlock_questions')
+    }
   },
 }
 </script>

@@ -41,4 +41,16 @@ export const common_state_store = {
     this.state.commands_count = commands_count
     this.state.active_command = 1
   },
+  remember_answer(question_index, answer_index){
+    this.state.questions[question_index].answer = {'command': this.state.active_command, 'answer_index': answer_index}
+    this.next_command()
+  },
+  next_command() {
+    var active_command = this.state.active_command + 1
+    if (active_command > this.state.commands_count) {
+      this.state.active_command = 1
+    } else {
+      this.state.active_command = active_command
+    }
+  },
 }
