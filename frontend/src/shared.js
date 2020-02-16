@@ -3,12 +3,12 @@ export const ComplexityHard = "Hard";
 export const ComplexityMedium = "Medium";
 export const ComplexityEasy = "Easy";
 
-
 export const common_state_store = {
   state: {
     commands_count: 0,
     active_command: 0,
     complexities: [ComplexityEasy, ComplexityMedium, ComplexityHard],
+    game_finished: false,
     questions: [
       {
         "complexity": ComplexityHard,
@@ -40,6 +40,7 @@ export const common_state_store = {
   },
   _remember_answer(question_index, answer_index){
     this.state.questions[question_index].answer = {'command': this.state.active_command, 'answer_index': answer_index}
+    this._check_that_game_is_finished()
     this._next_command()
   },
   _next_command() {
@@ -50,6 +51,13 @@ export const common_state_store = {
       this.state.active_command = active_command
     }
   },
+  _check_that_game_is_finished() {
+    var without_answer = this.state.questions.filter(question => (!question.answer))
+    if (!without_answer.length) {
+      Bus.$emit("game_finished")
+      this.state.game_finished = true
+    }
+  }
 }
 
 Bus.$on('set_commands_count', (commands_count) => {common_state_store.state.commands_count = commands_count;common_state_store.state.active_command = 1})

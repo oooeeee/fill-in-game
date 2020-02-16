@@ -1,8 +1,11 @@
 <template>
   <div class="pd-2">
-    <div v-if="state.state.active_command">
+    <b-alert show v-if="state.state.game_finished">
+      Игра завершена
+    </b-alert>
+    <b-alert show v-else-if="state.state.active_command">
       {{text}}
-    </div>
+    </b-alert>
     <div v-else>
       Сколько будет команд?
       <br/>

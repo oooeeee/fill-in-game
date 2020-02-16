@@ -1,15 +1,32 @@
 <template>
   <div class="pd-2 card" style="width: 18rem; min-height: 18rem">
-    <div v-if="question_visible">
+    <div v-if="question_visible || state.state.game_finished">
       {{question_info.text}}
-      <b-button
-        variant="primary"
-        v-for="(answer, answer_index) in question_info.answers"
-        v-bind:key="answer_index"
-        @click.prevent="set_answer(question_index, answer_index)"
-      >
-        {{answer.text}}
-      </b-button>
+      <div v-if="state.state.game_finished">
+        <b-alert show>Отвечала команда {{question_info.answer.command}}</b-alert>
+        <span
+          v-bind:class="{
+            'badge': true,
+            'badge-success': (answer.right),
+            'badge-danger': (!answer.right && answer_index == question_info.answer.answer_index),
+            'badge-secondary': (!answer.right && answer_index != question_info.answer.answer_index),
+          }"
+          v-for="(answer, answer_index) in question_info.answers"
+          v-bind:key="answer_index"
+        >
+          {{answer.text}}
+        </span>
+      </div>
+      <div v-else>
+        <b-button
+          variant="primary"
+          v-for="(answer, answer_index) in question_info.answers"
+          v-bind:key="answer_index"
+          @click.prevent="set_answer(question_index, answer_index)"
+        >
+          {{answer.text}}
+        </b-button>
+      </div>
     </div>
     <div v-else
       class="alert"
@@ -49,7 +66,6 @@ export default {
   created() {
     Bus.$on('lock_questions', (question_index) => {if (this.question_index != question_index) this.locked = true})
     Bus.$on('unlock_questions', () => {this.locked = false;this.question_visible = false})
-    Bus.$on('show_results', () => {this.show_results})
   },
 
   methods: {
