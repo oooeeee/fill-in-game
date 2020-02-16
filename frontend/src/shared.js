@@ -11,6 +11,7 @@ export const common_state_store = {
     game_finished: false,
     questions: [
       {
+        "img": "/molotov.jpg",
         "complexity": ComplexityHard,
         "text": "Во времена Великой Отечественной Войны партизаны и бойцы советской армии вели боевые действия различными способами, в том числе использовали бутылки с зажигательной смесью. При производстве этих бутылок на них обязательно наклеивали этикетку.",
         "answers": [
@@ -20,6 +21,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/brest.jpg",
         "complexity": ComplexityMedium,
         "text": "Назовите фортификационное сооружение на территории Советского Союза, которое первым приняло удар фашистской Германии.",
         "answers": [
@@ -29,6 +31,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/nm.jpg",
         "complexity": ComplexityEasy,
         "text": "Сила тяги, которую развивает тяжелый танк равна 5 000 ньютонов, а легкий 2 000. Смогут ли два легких танка перетянуть один тяжелый?",
         "answers": [
@@ -37,6 +40,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/ww2.webp",
         "text": "Сколько дней и ночей длилась Великая Отечественная война?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -46,6 +50,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/9may.jpg",
         "text": "Когда состоялся первый парад Победы на Красной площади в честь разгрома фашистской Германии?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -55,6 +60,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/heroes.jpg",
         "text": "Скольким городам присвоено звание «Город-герой»?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -64,6 +70,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/1-6-388x220.jpg",
         "text": "Немецкие войска на захват этого города потратили 250 дней, а советские войска его освободили в 1944 году за 5 дней, о каком городе идет речь?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -73,6 +80,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/9may.jpg",
         "text": "Какое название получил парад, состоявшийся 24 июня 1945 года на Красной площади?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -82,6 +90,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/voina.jpg",
         "text": "Какую песню можно назвать своеобразным гимном защиты Отечества? Слова В.И. Лебдева-Кумача, композитор А.В. Александров. 27 июня 1941 года на Белорусском вокзале была исполнена впервые, прозвучала сразу 5 раз. С октября 1941 года стала самой популярной песней.",
         "complexity": ComplexityMedium,
         "answers": [
@@ -91,6 +100,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/hqdefault.jpg",
         "text": "Сколько дней продолжалась героическая оборона Ленинграда?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -100,6 +110,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "katya.webp",
         "text": "Как ласково называлось новое секретное оружие нашей армии?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -118,6 +129,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/1737434013e6.jpg",
         "text": "Какой продукт в годы Великой Отечественной войны на севере спас от смерти много солдат, детей, женщин, стариков?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -127,6 +139,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/e59f5735-75db-4da8-8aa1-8ccfbbc451e9.jpg",
         "text": "Когда началась Великая Отечественная война?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -136,6 +149,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "4oyw8RG2qFS8_iurii-levitan.jpg",
         "text": "Чей голос прозвучал по Всесоюзному радио, оповещая о начале ВОВ?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -145,6 +159,7 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/brest.jpg",
         "text": "Сколько дней длилась оборона Брестской крепости?",
         "complexity": ComplexityMedium,
         "answers": [
@@ -161,38 +176,33 @@ export const common_state_store = {
         ],
       },
       {
-        "text": "Даты блокады Ленинграда?",
-        "complexity": ComplexityMedium,
-        "answers": [
-          {"text": "8 сентября 1941 – 27 января 1944", "right": true},
-        ],
-      },
-      {
-        "text": "Что такое «дорога жизни»?",
-        "complexity": ComplexityMedium,
-        "answers": [
-          {"text": "Единственная дорога через Ладожское озеро, связующая блокадный Ленинград с Родиной", "right": true},
-        ],
-      },
-      {
+        "img": "/69392945_482375179014600_7562506439734853632_n.jpg",
         "text": "Какого размера был паёк для жителей Ленинграда в самые тяжёлые дни блокады?",
         "complexity": ComplexityMedium,
         "answers": [
-          {"text": "до 125 гр. хлеба, которой на половину состоял из несъедобных примесей", "right": true},
+          {"text": "75 гр. хлеба", "right": false},
+          {"text": "125 гр. хлеба", "right": true},
+          {"text": "250 гр. хлеба", "right": false},
         ],
       },
       {
+        "img": "/Hermitage1.jpg",
         "text": "В какой город были эвакуированы в 1941 году сокровища Эрмитажа?",
         "complexity": ComplexityMedium,
         "answers": [
+          {"text": "Москва", "right": false},
+          {"text": "Самара", "right": false},
           {"text": "Свердловск", "right": true},
         ],
       },
       {
+        "img": "/metronome.jpg",
         "text": "Звук, какого прибора стал сигналом тревоги вражеских авианалётов?",
         "complexity": ComplexityMedium,
         "answers": [
           {"text": "Метроном", "right": true},
+          {"text": "Радио", "right": false},
+          {"text": "Велосипед", "right": false},
         ],
       },
       {
@@ -210,33 +220,33 @@ export const common_state_store = {
         ],
       },
       {
+        "img": "/8vA78_duGXw.jpg",
         "text": "Сколько дней продолжалась Сталинградская битва?",
         "complexity": ComplexityMedium,
         "answers": [
+          {"text": "5", "right": false},
+          {"text": "15", "right": false},
           {"text": "200", "right": true},
         ],
       },
       {
+        "img": "/t-34-85-tank-ww2-war-art.jpg",
         "text": "Лучший танк Советской армии во время ВОВ?",
         "complexity": ComplexityMedium,
         "answers": [
           {"text": "Танк «Т-34»", "right": true},
+          {"text": "Танк «Т-90»", "right": false},
           {"text": "«Тигр»", "right": false},
         ],
       },
       {
-        "text": "Название ракетной установки, которая была изобретена незадолго до войны?",
-        "complexity": ComplexityMedium,
-        "answers": [
-          {"text": "Катюша", "right": true},
-        ],
-      },
-      {
+        "img": "/oruzhie-voennaya-texnika-moshh-ec688a4.jpg",
         "text": "Немецкий тяжёлый танк времён ВОВ?",
         "complexity": ComplexityMedium,
         "answers": [
-          {"text": "«Тигр»", "right": true},
           {"text": "Танк «Т-34»", "right": false},
+          {"text": "Танк «Т-90»", "right": false},
+          {"text": "«Тигр»", "right": true},
         ],
       },
       {

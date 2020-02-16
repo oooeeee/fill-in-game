@@ -30,9 +30,17 @@
     </div>
     <div v-else
       class="alert"
-      style="width: 100%; min-height: 18rem"
       id="popover-button-variant"
       @click.prevent="show_question()"
+      v-bind:style="{
+        'background-image': question_info.img?'url('+question_info.img+')':false,
+        'width': '100%',
+        'min-height': '18rem',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center',
+        'background-repeat': 'no-repeat',
+        'background-size': 'cover',
+      }"
       v-bind:class="{
         'alert-success': question_info.complexity == state.state.complexities[0],
         'alert-warning': question_info.complexity == state.state.complexities[1],
