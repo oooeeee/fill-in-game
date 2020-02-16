@@ -41,7 +41,21 @@ export default {
     },
     stats() {
       if (!this.state.state.game_finished) return ''
-      return 'Победила дружба'
+      var results = {}
+      this.state.state.questions.forEach(question => {
+        results[question.answer.team] || (results[question.answer.team] = 0)
+        results[question.answer.team] += question.answers[question.answer.answer_index].right?1:0
+      })
+      var by_points = {}
+      Object.keys(results).forEach(team => {
+        var points = results[team]
+        by_points[points] || (by_points[points] = [])
+        by_points[points].push(team)
+      })
+      var max_points = Object.keys(by_points).sort().reverse()[0]
+      if (by_points[max_points].length == 1)
+        return "Победила команда " + by_points[max_points]
+      return "Победила дружба"
     }
   },
 
