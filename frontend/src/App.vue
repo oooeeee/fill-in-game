@@ -1,7 +1,7 @@
 <template>
   <div class="main-app">
-    <CommandHeader/>
-    <div class="d-flex flex-wrap" v-if="state.state.active_command">
+    <TeamHeader/>
+    <div class="d-flex flex-wrap" v-if="state.state.active_team">
       <Question v-for="(question, index) in state.state.questions" v-bind:key="index" :question_info="question" :question_index="index"/>
     </div>
   </div>
@@ -10,13 +10,13 @@
 <script>
 import { common_state_store } from './shared'
 import Question from './components/Question'
-import CommandHeader from './components/CommandHeader'
+import TeamHeader from './components/TeamHeader'
 
 export default {
   name: 'app',
   components: {
     Question,
-    CommandHeader,
+    TeamHeader,
   },
   data: () => ({
     state: common_state_store,

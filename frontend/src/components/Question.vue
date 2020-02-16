@@ -3,7 +3,7 @@
     <div v-if="question_visible || state.state.game_finished">
       {{question_info.text}}
       <div v-if="state.state.game_finished">
-        <b-alert show>Отвечала команда {{question_info.answer.command}}</b-alert>
+        <b-alert show>Отвечала команда {{question_info.answer.team}}</b-alert>
         <span
           v-bind:class="{
             'badge': true,
