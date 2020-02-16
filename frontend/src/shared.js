@@ -14,8 +14,8 @@ export const common_state_store = {
         "complexity": ComplexityHard,
         "text": "Во времена Великой Отечественной Войны партизаны и бойцы советской армии вели боевые действия различными способами, в том числе использовали бутылки с зажигательной смесью. При производстве этих бутылок на них обязательно наклеивали этикетку.",
         "answers": [
-          {"text": "огнеопасно", "right": true},
-          {"text": "инструкция по применению", "right": false},
+          {"text": "огнеопасно", "right": false},
+          {"text": "инструкция по применению", "right": true},
           {"text": "детям в руки не брать", "right": false},
         ],
       },
@@ -23,8 +23,8 @@ export const common_state_store = {
         "complexity": ComplexityMedium,
         "text": "Назовите фортификационное сооружение на территории Советского Союза, которое первым приняло удар фашистской Германии.",
         "answers": [
-          {"text": "Петропавловская крепость", "right": true},
-          {"text": "Брестская крепость", "right": false},
+          {"text": "Петропавловская крепость", "right": false},
+          {"text": "Брестская крепость", "right": true},
           {"text": "Североморская застава", "right": false},
         ],
       },
@@ -36,6 +36,237 @@ export const common_state_store = {
           {"text": "нет", "right": false},
         ],
       },
+      {
+        "text": "Сколько дней и ночей длилась Великая Отечественная война?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "1418 дней", "right": true},
+          {"text": "1000 дней", "right": false},
+          {"text": "900 дней", "right": false},
+        ],
+      },
+      {
+        "text": "Когда состоялся первый парад Победы на Красной площади в честь разгрома фашистской Германии?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "9 мая 1945 года", "right": false},
+          {"text": "24 июня 1945 года", "right": true},
+          {"text": "22 июня 1941 года", "right": false},
+        ],
+      },
+      {
+        "text": "Скольким городам присвоено звание «Город-герой»?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "один город", "right": false},
+          {"text": "12 городов", "right": true},
+          {"text": "7 городов", "right": false},
+        ],
+      },
+      {
+        "text": "Немецкие войска на захват этого города потратили 250 дней, а советские войска его освободили в 1944 году за 5 дней, о каком городе идет речь?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Севастополь", "right": true},
+          {"text": "Ленинград", "right": false},
+          {"text": "Москва", "right": false},
+        ],
+      },
+      {
+        "text": "Какое название получил парад, состоявшийся 24 июня 1945 года на Красной площади?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Первый Парад", "right": false},
+          {"text": "Парад Победы", "right": true},
+          {"text": "Парад Цветов", "right": false},
+        ],
+      },
+      {
+        "text": "Какую песню можно назвать своеобразным гимном защиты Отечества? Слова В.И. Лебдева-Кумача, композитор А.В. Александров. 27 июня 1941 года на Белорусском вокзале была исполнена впервые, прозвучала сразу 5 раз. С октября 1941 года стала самой популярной песней.",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "«День Победы»", "right": false},
+          {"text": "«Катюша»", "right": false},
+          {"text": "«Священная война»", "right": true},
+        ],
+      },
+      {
+        "text": "Сколько дней продолжалась героическая оборона Ленинграда?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "около 900 дней", "right": true},
+          {"text": "около 500 дней", "right": false},
+          {"text": "около 100 дней", "right": false},
+        ],
+      },
+      {
+        "text": "Как ласково называлось новое секретное оружие нашей армии?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "«Марфуша»", "right": false},
+          {"text": "«Катюша»", "right": true},
+          {"text": "«Победа»", "right": false},
+        ],
+      },
+      {
+        "text": "Назовите верховного главнокомандующего советских войск в великой Отечественной войне?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "И.В.Сталин", "right": true},
+          {"text": "В.И. Ленин", "right": false},
+          {"text": "Г.К.Жуков", "right": false},
+        ],
+      },
+      {
+        "text": "Какой продукт в годы Великой Отечественной войны на севере спас от смерти много солдат, детей, женщин, стариков?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "мясо белого медведя", "right": false},
+          {"text": "тюленье сало", "right": true},
+          {"text": "рыбий жир", "right": false},
+        ],
+      },
+      {
+        "text": "Когда началась Великая Отечественная война?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "22 июня 1941 года", "right": true},
+          {"text": "9 мая 1945 года", "right": false},
+          {"text": "29 февраля 1939 года", "right": false},
+        ],
+      },
+      {
+        "text": "Чей голос прозвучал по Всесоюзному радио, оповещая о начале ВОВ?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "И. В. Сталин", "right": false},
+          {"text": "Юрий Борисович Левитан", "right": true},
+          {"text": "Тима Белорусских", "right": false},
+        ],
+      },
+      {
+        "text": "Сколько дней длилась оборона Брестской крепости?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "900 дней", "right": false},
+          {"text": "5 дней", "right": false},
+          {"text": "30 дней", "right": true},
+        ],
+      },
+      {
+        "text": "Юная санитарка, боец Брестской крепости, пионер-герой ВОВ?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Валя Зенкина", "right": true},
+        ],
+      },
+      {
+        "text": "Даты блокады Ленинграда?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "8 сентября 1941 – 27 января 1944", "right": true},
+        ],
+      },
+      {
+        "text": "Что такое «дорога жизни»?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Единственная дорога через Ладожское озеро, связующая блокадный Ленинград с Родиной", "right": true},
+        ],
+      },
+      {
+        "text": "Какого размера был паёк для жителей Ленинграда в самые тяжёлые дни блокады?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "до 125 гр. хлеба, которой на половину состоял из несъедобных примесей", "right": true},
+        ],
+      },
+      {
+        "text": "В какой город были эвакуированы в 1941 году сокровища Эрмитажа?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Свердловск", "right": true},
+        ],
+      },
+      {
+        "text": "Звук, какого прибора стал сигналом тревоги вражеских авианалётов?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Метроном", "right": true},
+        ],
+      },
+      {
+        "text": "Кто руководил обороной Москвы в 1941 году?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Георгий Константинович Жуков", "right": true},
+        ],
+      },
+      {
+        "text": "Какое событие является коренным переломом в ВОВ?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Сталинградская битва", "right": true},
+        ],
+      },
+      {
+        "text": "Сколько дней продолжалась Сталинградская битва?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "200", "right": true},
+        ],
+      },
+      {
+        "text": "Лучший танк Советской армии во время ВОВ?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Танк «Т-34»", "right": true},
+          {"text": "«Тигр»", "right": false},
+        ],
+      },
+      {
+        "text": "Название ракетной установки, которая была изобретена незадолго до войны?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Катюша", "right": true},
+        ],
+      },
+      {
+        "text": "Немецкий тяжёлый танк времён ВОВ?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "«Тигр»", "right": true},
+          {"text": "Танк «Т-34»", "right": false},
+        ],
+      },
+      {
+        "text": "Первый российский город, из которого были изгнана фашистская армия?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Ельня", "right": true},
+        ],
+      },
+      {
+        "text": "Название города, который фашистские войска пытались захватить в течение 250 дней, а Советская армия освободила за 5 дней?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "Севастополь", "right": true},
+        ],
+      },
+      {
+        "text": "Когда водружено Советское знамя над зданием Рейхстага?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "30 апреля 1945 года", "right": true},
+        ],
+      },
+      {
+        "text": "Дата подписания акта о безоговорочной капитуляции Фашистской Германии?",
+        "complexity": ComplexityMedium,
+        "answers": [
+          {"text": "8 мая 1945 года", "right": true},
+        ],
+        }
     ],
   },
   _remember_answer(question_index, answer_index){
